@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>TEST</title>
+</head>
+<style>
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0px, 0px, 0px, 0px);
+    margin: -1px;
+    padding: 0px;
+    overflow: hidden;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+</style>
+<div class="header__searchControls">
+            <input id="desktop-header-search-id" class="header__searchControl" type="text" placeholder="Wyszukaj" role="combobox" aria-label="Wyszukaj w portalu ING Bank Śląski, po wpisaniu trzech znaków możesz skorzystać z podpowiedzi poniżej">
+            <button type="submit" class="header__searchSubmit">
+                Wyszukaj
+                <span class="sr-only">w ING.pl</span>
+            </button>
+        </div>
+
+
+<div class="sc-kJpAUB jRZbMN">
+	<div role="status" class="sr-only" id="ariax">Lalala, dodaj 3 sztuki</div>
+	<div class="sc-kHdrYz frKeb">
+		<a tabindex="0" role="button" class="sc-bzPmhk hLzoah add" href="#" aria-pressed="false">Dodaj do porównania<span class="sr-only"> Maksymalnie 3 produkty</span></a>
+		</div></div>
+
+<script>
+document.addEventListener('click', function (e) {
+  const link = e.target.closest('a');
+
+  if (!link) return;
+
+  const aria = document.getElementById('ariax');
+  aria.textContent = '';
+
+  if (link.classList.contains('add')) {
+    link.classList.remove('add');
+    link.classList.add('finish');
+    link.textContent = 'Zakończ porównanie';
+    
+    link.setAttribute('aria-pressed', "true");
+    
+    setTimeout(() => {
+		aria.textContent = 'aria - zakończ porównanie';
+	}, 50);
+    
+  } else if (link.classList.contains('finish')) {
+    link.classList.remove('finish');
+    link.classList.add('add');
+    link.textContent = 'Dodaj do porównania';
+    
+    link.setAttribute('aria-pressed', "false");
+    
+	setTimeout(() => {
+		aria.textContent = 'aria - dodaj do porównania 3 sztuki';
+	}, 50);
+  }
+  
+  e.preventDefault();
+});
+</script>
+
+</html>
