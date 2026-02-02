@@ -27,7 +27,7 @@
 
 
 <div class="sc-kJpAUB jRZbMN">
-	<div role="status" class="sr-only" id="ariax">Lalala, dodaj 3 sztuki</div>
+	<div role="status" class="sr-only" id="ariax"></div>
 	<div class="sc-kHdrYz frKeb">
 		<a tabindex="0" role="button" class="sc-bzPmhk hLzoah add" href="#" aria-pressed="false">Dodaj do porównania<span class="sr-only"> Maksymalnie 3 produkty</span></a>
 		</div></div>
@@ -50,6 +50,9 @@ document.addEventListener('click', function (e) {
     
     setTimeout(() => {
 		aria.textContent = 'aria - zakończ porównanie';
+		setTimeout(() => {
+			aria.textContent = '';
+		}, 50);
 	}, 50);
     
   } else if (link.classList.contains('finish')) {
@@ -61,6 +64,9 @@ document.addEventListener('click', function (e) {
     
 	setTimeout(() => {
 		aria.textContent = 'aria - dodaj do porównania 3 sztuki';
+		setTimeout(() => {
+			aria.textContent = '';
+		}, 50);
 	}, 50);
   }
   
