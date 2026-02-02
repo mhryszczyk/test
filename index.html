@@ -17,7 +17,7 @@
     border-image: initial;
 }
 </style>
-Nowa wersja 3
+Nowa wersja 4
 <div class="header__searchControls">
             <input id="desktop-header-search-id" class="header__searchControl" type="text" placeholder="Wyszukaj" role="combobox" aria-label="Wyszukaj w portalu ING Bank Śląski, po wpisaniu trzech znaków możesz skorzystać z podpowiedzi poniżej">
             <button type="submit" class="header__searchSubmit">
@@ -51,7 +51,7 @@ document.addEventListener('click', function (e) {
 		aria.textContent = 'aria - zakończ porównanie';
 		setTimeout(() => {
 			aria.textContent = '';
-		}, 2000);
+		}, 1000);
 	}, 50);
     
   } else if (link.classList.contains('finish')) {
@@ -64,7 +64,7 @@ document.addEventListener('click', function (e) {
 		aria.textContent = 'aria - dodaj do porównania 3 sztuki';
 		setTimeout(() => {
 			aria.textContent = '';
-		}, 2000);
+		}, 1000);
 	}, 50);
   }
   
