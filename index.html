@@ -17,7 +17,7 @@
     border-image: initial;
 }
 </style>
-Nowa wersja
+Nowa wersja 2
 <div class="header__searchControls">
             <input id="desktop-header-search-id" class="header__searchControl" type="text" placeholder="Wyszukaj" role="combobox" aria-label="Wyszukaj w portalu ING Bank Śląski, po wpisaniu trzech znaków możesz skorzystać z podpowiedzi poniżej">
             <button type="submit" class="header__searchSubmit">
@@ -30,7 +30,7 @@ Nowa wersja
 <div class="sc-kJpAUB jRZbMN">
 	<div role="status" class="sr-only" id="ariax"></div>
 	<div class="sc-kHdrYz frKeb">
-		<a tabindex="0" role="button" class="sc-bzPmhk hLzoah add" href="#" aria-pressed="false">Dodaj do porównania<span class="sr-only"> Maksymalnie 3 produkty</span></a>
+		<a tabindex="0" role="button" class="sc-bzPmhk hLzoah add" href="#">Dodaj do porównania<span class="sr-only"> Maksymalnie 3 produkty</span></a>
 		</div></div>
 
 <script>
@@ -47,8 +47,6 @@ document.addEventListener('click', function (e) {
     link.classList.add('finish');
     link.textContent = 'Zakończ porównanie';
     
-    link.setAttribute('aria-pressed', "true");
-    
     setTimeout(() => {
 		aria.textContent = 'aria - zakończ porównanie';
 		setTimeout(() => {
@@ -60,9 +58,8 @@ document.addEventListener('click', function (e) {
     link.classList.remove('finish');
     link.classList.add('add');
     link.textContent = 'Dodaj do porównania';
-    
-    link.setAttribute('aria-pressed', "false");
-    
+
+
 	setTimeout(() => {
 		aria.textContent = 'aria - dodaj do porównania 3 sztuki';
 		setTimeout(() => {
